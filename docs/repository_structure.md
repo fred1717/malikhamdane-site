@@ -71,7 +71,8 @@ malikhamdane-site
 ├── .env
 ├── .env.example
 ├── .gitignore
+├── CHANGELOG.md
 ├── README.md
 └── journal.md
 
-21 directories, 37 files
+21 directories, 38 files

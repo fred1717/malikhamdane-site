@@ -70,4 +70,7 @@ No IAM access keys are stored.
 See `docs/repository_structure.md`.
 
 
+## Changelog
+
+See `CHANGELOG.md`.
 
