@@ -11,9 +11,13 @@ body {
     line-height: 1.6;
 }
 
+/* ---------------------------------------------------------------------------
+   Header
+   --------------------------------------------------------------------------- */
+
 header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dee2e6;
+    background-color: #1b2838;
+    border-bottom: 3px solid #d4882e;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -23,7 +27,12 @@ header {
 header h1 {
     font-size: 1.4rem;
     font-weight: 600;
+    color: #ffffff;
 }
+
+/* ---------------------------------------------------------------------------
+   Navigation (language switcher)
+   --------------------------------------------------------------------------- */
 
 nav {
     display: flex;
@@ -32,21 +41,26 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #6c757d;
+    color: #8a9bb0;
     font-size: 0.85rem;
     padding: 0.3rem 0.5rem;
     border-radius: 3px;
+    transition: color 0.2s, background-color 0.2s;
 }
 
 nav a:hover {
-    color: #212529;
-    background-color: #e9ecef;
+    color: #ffffff;
+    background-color: #2a3d54;
 }
 
 nav a.active {
-    color: #212529;
+    color: #d4882e;
     font-weight: 600;
 }
+
+/* ---------------------------------------------------------------------------
+   Main content
+   --------------------------------------------------------------------------- */
 
 main {
     max-width: 800px;
@@ -58,15 +72,21 @@ section {
     margin-bottom: 2.5rem;
 }
 
+/* ---------------------------------------------------------------------------
+   Typography
+   --------------------------------------------------------------------------- */
+
 h2 {
     font-size: 1.6rem;
     font-weight: 600;
+    color: #1b2838;
     margin-bottom: 1rem;
 }
 
 h3 {
     font-size: 1.2rem;
     font-weight: 600;
+    color: #1b2838;
     margin-bottom: 1rem;
 }
 
@@ -75,6 +95,10 @@ p {
     color: #495057;
     margin-bottom: 1rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Lists
+   --------------------------------------------------------------------------- */
 
 ul {
     list-style: none;
@@ -87,22 +111,35 @@ ul li {
 }
 
 ul li strong {
-    color: #212529;
+    color: #1b2838;
 }
+
+/* ---------------------------------------------------------------------------
+   Links
+   --------------------------------------------------------------------------- */
 
 a {
     text-decoration: none;
-    color: #0d6efd;
+    color: #d4882e;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #b8722a;
 }
+
+/* ---------------------------------------------------------------------------
+   Certifications
+   --------------------------------------------------------------------------- */
 
 .cert-date {
     color: #6c757d;
     font-size: 0.9rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Languages note
+   --------------------------------------------------------------------------- */
 
 .languages-note {
     font-size: 0.95rem;
@@ -110,9 +147,27 @@ a:hover {
     font-style: italic;
 }
 
+/* ---------------------------------------------------------------------------
+   Root index and 404 (centred layout)
+   --------------------------------------------------------------------------- */
+
+.page-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .container {
     text-align: center;
     padding: 2rem;
+}
+
+.container h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1b2838;
+    margin-bottom: 1.5rem;
 }
 
 .languages {
@@ -125,15 +180,28 @@ a:hover {
 .languages a {
     display: inline-block;
     padding: 0.6rem 1.2rem;
-    border: 1px solid #dee2e6;
+    border: 1px solid #1b2838;
     border-radius: 4px;
-    color: #212529;
+    color: #1b2838;
     background-color: #ffffff;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .languages a:hover {
-    background-color: #e9ecef;
+    background-color: #1b2838;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------------
+   404 page
+   --------------------------------------------------------------------------- */
+
+.error-code {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1b2838;
+    margin-bottom: 1.5rem;
 }
 
 .messages {
@@ -146,9 +214,13 @@ a:hover {
     margin-bottom: 0.4rem;
 }
 
+/* ---------------------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------------------- */
+
 footer {
     text-align: center;
     padding: 2rem;
-    color: #adb5bd;
+    color: #8a9bb0;
     font-size: 0.85rem;
 }
