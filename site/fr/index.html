@@ -61,71 +61,60 @@
             padding: 0 2rem;
         }
 
-        .intro {
+        section {
             margin-bottom: 2.5rem;
         }
 
-        .intro h2 {
+        h2 {
             font-size: 1.6rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
 
-        .intro p {
-            font-size: 1rem;
-            color: #495057;
-            margin-bottom: 1rem;
-        }
-
-        .links {
-            margin-bottom: 2.5rem;
-        }
-
-        .links h3 {
+        h3 {
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
 
-        .links ul {
+        p {
+            font-size: 1rem;
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+
+        ul {
             list-style: none;
-        }
-
-        .links li {
-            margin-bottom: 0.6rem;
-        }
-
-        .links a {
-            text-decoration: none;
-            color: #0d6efd;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        .contact {
-            margin-bottom: 2.5rem;
-        }
-
-        .contact h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
             margin-bottom: 1rem;
         }
 
-        .contact p {
-            font-size: 1rem;
+        ul li {
+            margin-bottom: 0.6rem;
             color: #495057;
         }
 
-        .contact a {
+        ul li strong {
+            color: #212529;
+        }
+
+        a {
             text-decoration: none;
             color: #0d6efd;
         }
 
-        .contact a:hover {
+        a:hover {
             text-decoration: underline;
+        }
+
+        .cert-date {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .languages-note {
+            font-size: 0.95rem;
+            color: #6c757d;
+            font-style: italic;
         }
 
         footer {
@@ -150,15 +139,52 @@
     </header>
 
     <main>
-        <section class="intro">
+        <section>
             <h2>Ingénieur Cloud AWS &amp; Architecte Solutions</h2>
             <p>
                 Conception et déploiement d'infrastructures cloud sécurisées,
-                automatisées et optimisées en coût sur Amazon Web Services.
+                automatisées et optimisées en coût sur AWS.
+            </p>
+            <p class="languages-note">
+                Disponible en français, anglais, allemand, espagnol, portugais et russe.
             </p>
         </section>
 
-        <section class="links">
+        <section>
+            <h3>Compétences</h3>
+            <ul>
+                <li><strong>Infrastructure as code</strong> – conception et déploiement d'infrastructures AWS avec Terraform.</li>
+                <li><strong>Pipelines CI/CD</strong> – workflows de déploiement automatisés avec GitHub Actions et fédération OIDC.</li>
+                <li><strong>Renforcement de la sécurité</strong> – pipelines AMI conformes CIS, politiques IAM au moindre privilège.</li>
+                <li><strong>Automatisation serverless</strong> – Lambda, Step Functions et workflows basés sur EventBridge.</li>
+                <li><strong>Reprise après sinistre</strong> – basculement inter-régions, contrôles de santé Route 53, réplication RDS.</li>
+                <li><strong>Optimisation des coûts</strong> – suivi par tags, automatisation du nettoyage des ressources, architecture adaptée au niveau gratuit.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Certifications AWS</h3>
+            <ul>
+                <li>
+                    <a href="https://www.credly.com/badges/3591144c-5e2f-49c8-927e-91cec58295b0" target="_blank" rel="noopener">AWS Certified Developer – Associate</a>
+                    <span class="cert-date">novembre 2025</span>
+                </li>
+                <li>
+                    <a href="https://www.credly.com/badges/d9502666-68ce-4e1a-bb8a-929b6e839cc9" target="_blank" rel="noopener">AWS Certified Solutions Architect – Associate</a>
+                    <span class="cert-date">août 2025</span>
+                </li>
+                <li>
+                    <a href="https://www.credly.com/badges/6d6356a6-1a60-4297-b699-614b82559130" target="_blank" rel="noopener">AWS Certified AI Practitioner</a>
+                    <span class="cert-date">juin 2025</span>
+                </li>
+                <li>
+                    <a href="https://www.credly.com/badges/6552d631-ae9a-4584-8ce6-524cfa523ebe" target="_blank" rel="noopener">AWS Certified Cloud Practitioner</a>
+                    <span class="cert-date">janvier 2025</span>
+                </li>
+            </ul>
+        </section>
+
+        <section>
             <h3>Liens</h3>
             <ul>
                 <li><a href="https://github.com/fred1717" target="_blank" rel="noopener">GitHub</a></li>
@@ -166,7 +192,7 @@
             </ul>
         </section>
 
-        <section class="contact">
+        <section>
             <h3>Contact</h3>
             <p>
                 Pour toute demande professionnelle, contacter via
