@@ -22,7 +22,6 @@ malikhamdane-site
 ├── docs
 │   └── repository_structure.md
 ├── site
-│   ├── assets
 │   ├── css
 │   │   └── style.css
 │   ├── de
@@ -75,4 +74,4 @@ malikhamdane-site
 ├── README.md
 └── journal.md
 
-21 directories, 38 files
+20 directories, 38 files
