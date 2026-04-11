@@ -21,6 +21,8 @@ malikhamdane-site
 │       └── deploy.yml
 ├── docs
 │   └── repository_structure.md
+├── scripts
+│   └── build.py
 ├── site
 │   ├── css
 │   │   ├── mentions-legales.css
@@ -41,6 +43,8 @@ malikhamdane-site
 │   │   ├── mentions-legales
 │   │   │   └── index.html
 │   │   └── index.html
+│   ├── includes
+│   │   └── header.html
 │   ├── pt
 │   │   ├── mentions-legales
 │   │   │   └── index.html
@@ -92,4 +96,4 @@ malikhamdane-site
 ├── README.md
 └── journal.md
 
-27 directories, 49 files
+29 directories, 51 files
