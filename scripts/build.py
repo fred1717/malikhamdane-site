@@ -43,7 +43,7 @@ def process_header(template, language):
     for lang in SUPPORTED_LANGUAGES:
         placeholder = "{{ACTIVE_" + lang.upper() + "}}"
         if lang == language:
-            processed = processed.replace(placeholder, ACTIVE_CLASS)
+            processed = processed.replace(" " + placeholder, " " + ACTIVE_CLASS)
         else:
             processed = processed.replace(" " + placeholder, "")
     return processed
