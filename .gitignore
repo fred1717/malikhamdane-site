@@ -4,6 +4,9 @@
 # Local project journal (not tracked)
 journal.md
 
+# Zoho Mail DNS verification (temporary)
+zoho/
+
 # Terraform
 .terraform/
 *.tfstate

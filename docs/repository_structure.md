@@ -23,18 +23,31 @@ malikhamdane-site
 │   └── repository_structure.md
 ├── site
 │   ├── css
+│   │   ├── mentions-legales.css
 │   │   └── style.css
 │   ├── de
+│   │   ├── mentions-legales
+│   │   │   └── index.html
 │   │   └── index.html
 │   ├── en
+│   │   ├── mentions-legales
+│   │   │   └── index.html
 │   │   └── index.html
 │   ├── es
+│   │   ├── mentions-legales
+│   │   │   └── index.html
 │   │   └── index.html
 │   ├── fr
+│   │   ├── mentions-legales
+│   │   │   └── index.html
 │   │   └── index.html
 │   ├── pt
+│   │   ├── mentions-legales
+│   │   │   └── index.html
 │   │   └── index.html
 │   ├── ru
+│   │   ├── mentions-legales
+│   │   │   └── index.html
 │   │   └── index.html
 │   ├── 404.html
 │   └── index.html
@@ -62,6 +75,11 @@ malikhamdane-site
 │   │       ├── main.tf
 │   │       ├── outputs.tf
 │   │       └── variables.tf
+│   ├── zoho
+│   │   ├── dkim.json
+│   │   ├── mx.json
+│   │   ├── txt-root.json
+│   │   └── zoho-verification.json
 │   ├── .terraform.lock.hcl
 │   ├── main.tf
 │   ├── outputs.tf
@@ -74,4 +92,4 @@ malikhamdane-site
 ├── README.md
 └── journal.md
 
-20 directories, 38 files
+27 directories, 49 files
