@@ -7,7 +7,8 @@ The site is static and served via the following services:
 - ACM for SSL
 - Route 53 for DNS
 
-The entire stack is managed within a single provider.
+The infrastructure is managed within a single provider.
+Email hosting is external, with MX records managed in Route 53.
 Infrastructure is defined in Terraform.
 Deployment is handled by GitHub Actions.
 
@@ -40,15 +41,40 @@ Deployment is handled by GitHub Actions.
 
 - A custom 404 error page is served for invalid paths.
 
+- A build script (`scripts/build.py`) processes the HTML files before deployment.
+    The header and footer are maintained as shared templates in `site/includes/`.
+    Each HTML source file contains `{{HEADER}}` and `{{FOOTER}}` placeholders.
+    The build script replaces them with the processed templates.
+    The active language link in the header is set automatically based on the file path.
+    The mentions légales link in the footer is set to the correct language and label.
+
+- Each language directory contains a `mentions-legales/index.html` page.
+    This is a legal requirement under the LCEN (Loi pour la Confiance dans l'Économie Numérique).
+
+- Email is hosted on Zoho Mail Lite.
+    Route 53 manages the MX records pointing to Zoho Mail servers.
+    SPF (Sender Policy Framework) and DKIM (DomainKeys Identified Mail) records are also configured in Route 53.
+    They serve for email authentication.
+    Both are standard best practice for any custom domain email setup.
+    Zoho provides the exact values to add in Route 53 during the configuration process.
+    - SPF: A TXT record in Route 53 that declares which mail servers are authorised to send email on behalf of malikhamdane.com.
+            Without it, anyone could send an email pretending to be contact@malikhamdane.com.
+            Receiving mail servers check the SPF record to verify the sender is legitimate.
+    - DKIM: a TXT or CNAME record in Route 53 that publishes a public key.
+            Zoho Mail signs every outgoing email with a corresponding private key.
+            The receiving mail server uses the public key from the DNS record to verify the signature.
+            If the signature does not match, the email is flagged as suspicious or rejected.
+
 
 ## Cost
 
-The estimated annual cost is approximately $19 to $22:
+The estimated annual cost is approximately $29 to $32:
 - Route 53 hosted zone: $6.00
 - Domain registration: $13.00
 - S3 storage: approximately $0.25
 - CloudFront: $0.00 (free tier)
 - ACM certificate: $0.00
+- Zoho Mail Lite: $14.00 (12.96 €)
 
 
 ## Prerequisites
@@ -56,11 +82,13 @@ The estimated annual cost is approximately $19 to $22:
 - An AWS account
 - Terraform installed
 - AWS CLI configured with appropriate credentials
+- Python 3 installed (required by the build script)
 
 
 ## Deployment
 
-GitHub Actions deploys the site content to S3 on every push to `main` that modifies files in `site/`.
+GitHub Actions runs on every push to `main` that modifies files in `site/`.
+The pipeline executes `scripts/build.py` to process the templates, then uploads the contents of `build/` to S3.
 Authentication between GitHub Actions and AWS uses OIDC federation.
 No IAM access keys are stored.
 
