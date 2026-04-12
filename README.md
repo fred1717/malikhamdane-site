@@ -68,7 +68,7 @@ Deployment is handled by GitHub Actions.
 
 ## Cost
 
-The estimated annual cost is approximately $29 to $32:
+The estimated annual cost is approximately $32 to $35:
 - Route 53 hosted zone: $6.00
 - Domain registration: $13.00
 - S3 storage: approximately $0.25
