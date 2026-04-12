@@ -19,6 +19,36 @@ malikhamdane-site
 ├── .github
 │   └── workflows
 │       └── deploy.yml
+├── build
+│   ├── css
+│   │   ├── mentions-legales.css
+│   │   └── style.css
+│   ├── de
+│   │   ├── mentions-legales
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── en
+│   │   ├── mentions-legales
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── es
+│   │   ├── mentions-legales
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── fr
+│   │   ├── mentions-legales
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── pt
+│   │   ├── mentions-legales
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── ru
+│   │   ├── mentions-legales
+│   │   │   └── index.html
+│   │   └── index.html
+│   ├── 404.html
+│   └── index.html
 ├── docs
 │   └── repository_structure.md
 ├── scripts
@@ -44,6 +74,7 @@ malikhamdane-site
 │   │   │   └── index.html
 │   │   └── index.html
 │   ├── includes
+│   │   ├── footer.html
 │   │   └── header.html
 │   ├── pt
 │   │   ├── mentions-legales
@@ -96,4 +127,4 @@ malikhamdane-site
 ├── README.md
 └── journal.md
 
-29 directories, 51 files
+43 directories, 68 files
