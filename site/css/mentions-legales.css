@@ -1,6 +1,7 @@
 /* Mentions légales – spacing adjustments */
 
 .mentions-legales h3 {
+    margin-top: 0.10em;
     margin-bottom: 0.25em;
 }
 
